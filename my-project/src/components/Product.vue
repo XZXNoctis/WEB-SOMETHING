@@ -3,11 +3,11 @@
 	<div class="product">
 		<div style="background-color: #FFFFFF;">
 			<router-link :to="{path:'/product',query:{id:id}}">
-			
-			<div class="product-image">
-				<img :src="image" />
-			</div>
-			<div class="product-title" v-text="title"></div>
+
+				<div class="product-image">
+					<img :src="image" />
+				</div>
+				<div class="product-title" v-text="title"></div>
 			</router-link>
 			<div class="product-inof clear">
 				<div class="product-price left">￥ <span v-text="price"></span> </div>
@@ -37,7 +37,7 @@
 			},
 			title: {
 				type: String,
-				default: '商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题'
+				default: '商品标题'
 			},
 			price: {
 				type: Number,
@@ -50,7 +50,7 @@
 
 <style>
 	.product-list {
-		background-color:#EEEEEE;
+		background-color: red;
 	}
 	
 	.product {
@@ -59,7 +59,8 @@
 		box-sizing: border-box;
 		float: left;
 	}
-	.product a{
+	
+	.product a {
 		display: block;
 	}
 	
@@ -76,10 +77,10 @@
 		width: 100%;
 	}
 	
-	
-	.product-inof{
+	.product-inof {
 		height: 0.52rem;
 	}
+	
 	.product-title {
 		box-sizing: border-box;
 		height: 0.6rem;
@@ -91,11 +92,10 @@
 		-webkit-box-orient: vertical;
 		word-break: break-word;
 		color: #232326;
-		padding-top: 0.1rem;
 		line-height: 0.32rem;
-		padding-bottom: 0.06rem;
 		padding: 0 0.08rem;
-		background-color: #FFFFFF;
+		margin-top: 0.1rem;
+		margin-bottom: 0.06rem;
 	}
 	
 	.product-price {
